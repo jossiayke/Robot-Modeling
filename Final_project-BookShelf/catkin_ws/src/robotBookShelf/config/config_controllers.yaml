@@ -1,0 +1,68 @@
+# Robot name goes here
+robotBookShelf: # change the name
+  # default controller
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Controller 1
+  vertical_Slider_Cont: # change the name
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: vertical_Slider_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+
+  # Controller 2
+  vCap_Base_Cont: # change the name
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: vCap_Base_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+
+  # Controller 3
+  prism3_Bar_Cont: # change the name
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: prism3_Bar_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+
+  # Controller 4
+  lowerArm_Cont: # change the name
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: lowerArm_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+
+  # Controller 5
+  upperArm_Cont: # change the name
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: upperArm_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+
+  # Controller 6
+  wristBase_Cont: # change the name
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: wristBase_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+
+  # Controller 7
+  wrist_Cont: # change the name
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: wrist_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+
+  # Controller 8
+  gripperSlider_Cont: # change the name
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: gripperSlider_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+
+  # Controller 9
+  gripFinger1_Cont: # change the name
+    type: velocity_controllers/JointPositionController # Type of controller. 
+    joint: gripFinger1_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+  
+  # Controller 10
+  gripFinger2_Cont: # change the name
+    type: velocity_controllers/JointPositionController # Type of controller. 
+    joint: gripFinger2_Jnt # Name of the joint.  
+    pid : {p: 100.0 , i: 0.1 , d: 10.0} # Enter your pid values eg.
+
+ 

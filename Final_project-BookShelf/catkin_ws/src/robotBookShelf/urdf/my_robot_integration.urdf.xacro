@@ -1,0 +1,19 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<!-- Name your robot here -->
+<robot name ="robotBookShelf" xmlns:xacro="http://wiki.ros.org/xacro">
+  <!-- Include your urdf files here -->
+  <!-- Include Robot's urdf filepath -->
+  <!-- Include Lidar's urdf filepath -->
+  <xacro:include filename="$(find robotBookShelf)/urdf/robotBookShelf.urdf" />
+  
+  <!--  Gazebo plugin for control here is already added for you -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+	  <robotNamespace>/robotBookShelf</robotNamespace>
+	  <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+	  <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+
+</robot>	
+

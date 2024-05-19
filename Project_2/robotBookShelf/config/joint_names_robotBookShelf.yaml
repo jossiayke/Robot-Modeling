@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'vertical_Slider_Jnt', 'vCap_Base_Jnt', 'prism2_Bar_Jnt', 'prism3_Bar_Jnt', 'lowerArm_Jnt', 'upperArm_Jnt', 'wristBase_Jnt', 'wrist_Jnt', 'gripperBase_Jnt', 'gripperSlider_Jnt', 'gripFinger1_Jnt', 'gripFinger2_Jnt', ]

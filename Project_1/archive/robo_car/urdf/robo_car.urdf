@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robo_car">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.2106E-05 -1.3851E-05 0.088564"
+        rpy="0 0 0" />
+      <mass
+        value="16.781" />
+      <inertia
+        ixx="0.31281"
+        ixy="-3.1464E-05"
+        ixz="3.7905E-05"
+        iyy="0.60045"
+        iyz="-0.00010404"
+        izz="0.84364" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Front_Left_Connector">
+    <inertial>
+      <origin
+        xyz="0.0200383271021691 0.0829964623882728 0.00986862060406836"
+        rpy="0 0 0" />
+      <mass
+        value="0.217189838847836" />
+      <inertia
+        ixx="0.000476677416610789"
+        ixy="-8.87719390428498E-05"
+        ixz="-2.09363415487313E-05"
+        iyy="0.00013042762417441"
+        iyz="-8.67156663094677E-05"
+        izz="0.000428523663310604" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Front_Left_Connector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Front_Left_Connector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Left_Connector_Jnt"
+    type="revolute">
+    <origin
+      xyz="0.28381 0.22505 0.0889"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_Left_Connector" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel">
+    <inertial>
+      <origin
+        xyz="0.00894179306681803 2.77555756156289E-17 -0.0370358520456895"
+        rpy="0 0 0" />
+      <mass
+        value="1.3811796185109" />
+      <inertia
+        ixx="0.00347846411940805"
+        ixy="3.80648750888062E-19"
+        ixz="-0.000475471174239496"
+        iyy="0.00336366819560855"
+        iyz="-2.28634929603754E-19"
+        izz="0.00533301370937033" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Front_Left_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Front_Left_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Left_Wheel_Jnt"
+    type="continuous">
+    <origin
+      xyz="-0.017884 -0.074072 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Front_Left_Connector" />
+    <child
+      link="Front_Left_Wheel" />
+    <axis
+      xyz="-0.23469 0 0.97207" />
+  </joint>
+  <link
+    name="Front_Right_Connector">
+    <inertial>
+      <origin
+        xyz="-0.00209039203935429 -0.0853555973683551 0.00986862157241943"
+        rpy="0 0 0" />
+      <mass
+        value="0.217189788584135" />
+      <inertia
+        ixx="0.000497876956946551"
+        ixy="-9.52391572235638E-06"
+        ixz="2.18409327859871E-06"
+        iyy="0.000109228084129989"
+        iyz="8.91805038003025E-05"
+        izz="0.000428523669404356" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Front_Right_Connector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Front_Right_Connector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Right_Connector_Jnt"
+    type="revolute">
+    <origin
+      xyz="0.25089 -0.22856 0.0889"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_Right_Connector" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel">
+    <inertial>
+      <origin
+        xyz="-0.000932806279830195 2.4980018054066E-16 0.0380885792914893"
+        rpy="0 0 0" />
+      <mass
+        value="1.3811796185109" />
+      <inertia
+        ixx="0.00336491747667907"
+        ixy="-2.10732313891941E-19"
+        ixz="-5.10109570881734E-05"
+        iyy="0.00336366819560855"
+        iyz="-3.3697917009997E-20"
+        izz="0.00544656035209929" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Front_Right_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Front_Right_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Right_Wheel_Jnt"
+    type="continuous">
+    <origin
+      xyz="0.0018656 0.076177 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Front_Right_Connector" />
+    <child
+      link="Front_Right_Wheel" />
+    <axis
+      xyz="0.024483 0 -0.9997" />
+  </joint>
+  <link
+    name="Rear_Left_Connector">
+    <inertial>
+      <origin
+        xyz="-2.18795703776919E-09 0.0853811910443309 0.00986862167055426"
+        rpy="0 0 0" />
+      <mass
+        value="0.217189783087064" />
+      <inertia
+        ixx="0.000498110203898786"
+        ixy="-8.49120641004214E-12"
+        ixz="-1.90138618146874E-11"
+        iyy="0.000108994837574127"
+        iyz="-8.92072419281587E-05"
+        izz="0.000428523670308075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Rear_Left_Connector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Rear_Left_Connector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rear_Left_Connector_Jnt"
+    type="fixed">
+    <origin
+      xyz="-0.254 0.2286 0.0889"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="Rear_Left_Connector" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Rear_Left_Wheel">
+    <inertial>
+      <origin
+        xyz="-4.44089209850063E-16 -6.10622663543836E-16 -0.0381"
+        rpy="0 0 0" />
+      <mass
+        value="1.3811796185109" />
+      <inertia
+        ixx="0.00336366819560855"
+        ixy="-2.00336791613239E-19"
+        ixz="9.81042995735527E-20"
+        iyy="0.00336366819560855"
+        iyz="-1.1788319249218E-19"
+        izz="0.00544780963316982" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Rear_Left_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Rear_Left_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rear_Left_Wheel_Jnt"
+    type="continuous">
+    <origin
+      xyz="0 -0.0762 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Rear_Left_Connector" />
+    <child
+      link="Rear_Left_Wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Rear_Right_Connector">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Rear_Right_Connector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Rear_Right_Connector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rear_Right_Connector_Jnt"
+    type="fixed">
+    <origin
+      xyz="-0.254 -0.2286 0.0889"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="Rear_Right_Connector" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Rear_Right_Wheel">
+    <inertial>
+      <origin
+        xyz="-4.44089209850063E-16 -5.96744875736022E-16 0.0381"
+        rpy="0 0 0" />
+      <mass
+        value="1.3811796185109" />
+      <inertia
+        ixx="0.00336366819560855"
+        ixy="2.13476125509725E-20"
+        ixz="-5.53676955065405E-20"
+        iyy="0.00336366819560855"
+        iyz="4.97151929286546E-20"
+        izz="0.00544780963316982" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Rear_Right_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo_car/meshes/Rear_Right_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rear_Right_Wheel_Jnt"
+    type="continuous">
+    <origin
+      xyz="0 0.0762 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Rear_Right_Connector" />
+    <child
+      link="Rear_Right_Wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>

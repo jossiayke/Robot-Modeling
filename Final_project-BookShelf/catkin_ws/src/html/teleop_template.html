@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>teleop_template API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>teleop_template</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/env python3
+
+# Teleop Keyboard code was referenced from: https://github.com/ros-teleop/teleop_twist_keyboard
+#
+
+from __future__ import print_function
+
+import threading
+
+import rospy
+from std_msgs.msg import Float64
+from geometry_msgs.msg import Twist
+from geometry_msgs.msg import TwistStamped
+
+import sys,termios, tty, select
+
+
+msg = &#34;&#34;&#34;
+Reading from the keyboard  and Publishing to Twist!
+---------------------------
+Moving around:
+   u    i    o
+   j    k    l
+   m    ,    .
+For Holonomic mode (strafing), hold down the shift key:
+---------------------------
+   U    I    O
+   J    K    L
+   M    &lt;    &gt;
+t : up (+z)
+b : down (-z)
+
+a : gripper hold
+d : gripper release
+
+anything else : stop
+q/z : increase/decrease max speeds by 10%
+w/x : increase/decrease only linear speed by 10%
+e/c : increase/decrease only angular speed by 10%
+CTRL-C to quit
+&#34;&#34;&#34;
+
+moveBindings = {
+        &#39;i&#39;:(1,0,0,0,0),
+        &#39;o&#39;:(1,0,0,-1,0),
+        &#39;j&#39;:(0,0,0,1,0),
+        &#39;l&#39;:(0,0,0,-1,0),
+        &#39;u&#39;:(1,0,0,1,0),
+        &#39;,&#39;:(-1,0,0,0,0),
+        &#39;.&#39;:(-1,0,0,1,0),
+        &#39;m&#39;:(-1,0,0,-1,0),
+        &#39;O&#39;:(1,-1,0,0,0),
+        &#39;I&#39;:(1,0,0,0,0),
+        &#39;J&#39;:(0,1,0,0,0),
+        &#39;L&#39;:(0,-1,0,0,0),
+        &#39;U&#39;:(1,1,0,0,0),
+        &#39;&lt;&#39;:(-1,0,0,0,0),
+        &#39;&gt;&#39;:(-1,-1,0,0,0),
+        &#39;M&#39;:(-1,1,0,0,0),
+        &#39;t&#39;:(0,0,1,0,0),
+        &#39;b&#39;:(0,0,-1,0,0),
+        &#39;a&#39;:(0,0,0,0,1),
+        &#39;d&#39;:(0,0,0,0,-1)
+    }
+
+speedBindings={
+        &#39;q&#39;:(1.1,1.1),
+        &#39;z&#39;:(.9,.9),
+        &#39;w&#39;:(1.1,1),
+        &#39;x&#39;:(.9,1),
+        &#39;e&#39;:(1,1.1),
+        &#39;c&#39;:(1,.9),
+    }
+
+def getKey():
+    tty.setraw(sys.stdin.fileno())
+    rlist, _, _ = select.select([sys.stdin], [], [], 0.1)
+    if rlist:
+        key = sys.stdin.read(1)
+    else:
+        key = &#39;&#39;
+
+    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+    return key
+
+speed = 8
+turn = 0.4
+speed_pinch = 2
+
+def vels(speed,turn):
+    return &#34;currently:\tspeed %s\tturn %s &#34; % (speed,turn)
+    
+# Need 2 scripts
+# Publisher script to each controller / teleop (this script)
+    # 
+# A second subscriber script (subscribes to each joint topic) and publisher
+    # subscriber to Xdot
+        # set up to find Jacobian once
+    # callback function (conversion Xdot and thetadot)
+    # publishes to joint topic (makes robot move)
+
+
+if __name__==&#34;__main__&#34;:
+    settings = termios.tcgetattr(sys.stdin)
+    
+    rospy.init_node(&#39;robo_teleop&#39;)
+
+    pub_gripper = rospy.Publisher(&#39;/robotBookShelf/gripperSlider_Cont/command&#39;, Twist, queue_size=10) # Add your topic here between &#39;&#39;. Eg &#39;/book_robot/gripper/command&#39;
+    pub_gripperPinch = rospy.Publisher(&#39;/robotBookShelf/gripFinger1_Cont/command&#39;, Float64, queue_size=10)
+    pub_gripperPinch2 = rospy.Publisher(&#39;/robotBookShelf/gripFinger2_Cont/command&#39;, Float64, queue_size=10)
+    
+    robot_name = &#39;robotBookShelf&#39;
+
+    r= rospy.Rate(10)
+    
+    x = 0   # (xy is flat gripper plane) - moves gripper forward backward
+    y = 0   # (xy is flat gripper plane) - moves gripper left right
+    z = 0   # move in z world frame - moves gripper up and down
+    th = 0  # Rotate gripper about z axis
+    p = 0   # gripper pinch moves on plane parallel to xy plane
+    status = 0
+    count = 0
+    acc = 0.1
+    target_speed = 0
+    target_turn = 0
+    control = Twist()
+    control_pinchSpeed = 0
+    
+    try:
+        print (msg)
+        print (vels(speed,turn))
+        while not rospy.is_shutdown():
+            key = getKey()
+            if key in moveBindings.keys():
+                x = moveBindings[key][0]
+                y = moveBindings[key][1]
+                z = moveBindings[key][2]
+                th = moveBindings[key][3]
+                p = moveBindings[key][4]
+                count = 0
+            elif key in speedBindings.keys():
+                speed = speed * speedBindings[key][0]
+                turn = turn * speedBindings[key][1]
+                count = 0
+
+                print (vels(speed,turn))
+                if (status == 14):
+                    print (msg)
+                status = (status + 1) % 15
+            elif key == &#39; &#39; or key == &#39;k&#39; :
+                x = 0
+                y = 0
+                z = 0
+                th = 0
+                p = 0
+                control.linear.x = 0
+                control.linear.y = 0
+                control.linear.z = 0
+                control.angular.z = 0
+                
+            else:
+                count = count + 1
+                if count &gt; 500:
+                    x = 0
+                    th = 0
+                if (key == &#39;\x03&#39;):
+                    break
+
+            target_speed_x = speed * x
+            target_speed_y = speed * y
+            target_speed_z = speed * z
+            target_turn = turn * th
+            control_pinchSpeed = speed_pinch * p
+
+            if target_speed_x &gt; control.linear.x:
+                control.linear.x = min( target_speed_x, control.linear.x + 2 )
+            elif target_speed_x &lt; control.linear.x:
+                control.linear.x = max( target_speed_x, control.linear.x - 2 )
+            else:
+                control.linear.x = target_speed_x
+                
+            if target_speed_y &gt; control.linear.y:
+                control.linear.y = min( target_speed_y, control.linear.y + 2 )
+            elif target_speed_y &lt; control.linear.y:
+                control.linear.y = max( target_speed_y, control.linear.y - 2 )
+            else:
+                control.linear.y = target_speed_y
+                
+            if target_speed_z &gt; control.linear.z:
+                control.linear.z = min( target_speed_z, control.linear.z + 2 )
+            elif target_speed_z &lt; control.linear.z:
+                control.linear.z = max( target_speed_z, control.linear.z - 2 )
+            else:
+                control.linear.z = target_speed_z
+                
+
+            if target_turn &gt; control.angular.z:
+                control.angular.z = min( target_turn, control.angular.z + 0.1 )
+            elif target_turn &lt; control.angular.z:
+                control.angular.z = max( target_turn, control.angular.z - 0.1 )
+            else:
+                control.angular.z = target_turn
+                
+            
+
+            # rospy.loginfo(&#34;Sending gripper vel command and rotation [{},0,0,0][0,{},0,0][0,0,{},0],[0,0,0,{}] and grip pinch speed {} to {}&#34;
+            #               .format(control.linear.x,
+            #                       control.linear.y,
+            #                       control.linear.z,
+            #                       control.angular.z,
+            #                       control_pinchSpeed,
+            #                       robot_name))
+            pub_gripper.publish(control) # publish the turn command.
+            pub_gripperPinch.publish(control_pinchSpeed) # publish the turn command.
+            pub_gripperPinch2.publish(control_pinchSpeed) # publish the turn command.
+
+            r.sleep()
+
+    except Exception as e:
+        print (e)
+
+    finally:
+        pub_gripper.publish(control) # publish the turn command.
+        pub_gripperPinch.publish(control_pinchSpeed) # publish the turn command.
+        pub_gripperPinch2.publish(control_pinchSpeed) # publish the turn command.
+        
+    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="teleop_template.getKey"><code class="name flex">
+<span>def <span class="ident">getKey</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getKey():
+    tty.setraw(sys.stdin.fileno())
+    rlist, _, _ = select.select([sys.stdin], [], [], 0.1)
+    if rlist:
+        key = sys.stdin.read(1)
+    else:
+        key = &#39;&#39;
+
+    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+    return key</code></pre>
+</details>
+</dd>
+<dt id="teleop_template.vels"><code class="name flex">
+<span>def <span class="ident">vels</span></span>(<span>speed, turn)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def vels(speed,turn):
+    return &#34;currently:\tspeed %s\tturn %s &#34; % (speed,turn)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="teleop_template.getKey" href="#teleop_template.getKey">getKey</a></code></li>
+<li><code><a title="teleop_template.vels" href="#teleop_template.vels">vels</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
